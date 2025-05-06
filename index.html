@@ -42,9 +42,7 @@
       font-weight: bold;
       padding: 0.5rem;
     }
-    .sidebar nav a:hover {
-      background-color: #457b9d;
-    }
+    .sidebar nav a:hover { background-color: #457b9d; }
     .sidebar-footer {
       margin-top: 2rem;
       width: 100%;
@@ -53,15 +51,10 @@
     }
     .sidebar-footer img {
       width: 60px;
-      height: auto;
       opacity: 0.3;
       animation: pulse 4s infinite ease-in-out;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.05); opacity: 0.5; }
-      100% { transform: scale(1); opacity: 0.3; }
-    }
+    @keyframes pulse { 0% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.05); opacity: 0.5; } 100% { transform: scale(1); opacity: 0.3; } }
     main {
       flex-grow: 1;
       height: 100vh;
@@ -75,15 +68,8 @@
       line-height: 1.75;
     }
     #experience { padding-top: 12rem; }
-    .title {
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: #2d2d2d;
-    }
-    .contact {
-      font-size: 0.95rem;
-      margin-top: 0.3rem;
-    }
+    .title { font-size: 2.2rem; font-weight: bold; color: #2d2d2d; }
+    .contact { font-size: 0.95rem; margin-top: 0.3rem; }
     .contact i { color: red; }
     h2 {
       font-size: 1.3rem;
@@ -93,44 +79,21 @@
       color: #222;
     }
     ul { margin-left: 1.5rem; padding-left: 1rem; }
-    .company {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-top: 2rem;
-      color: #8B0000;
-    }
-    .position-date {
+    .company { font-size: 1.2rem; font-weight: bold; margin-top: 2rem; color: #8B0000; }
+    .position-date { display: flex; justify-content: space-between; color: #333; }
+    .position-date span.date { color: #8B0000; font-weight: normal; white-space: nowrap; }
+    .edu {
       display: flex;
       justify-content: space-between;
-      color: #333;
-    }
-    .position-date span.date {
-      color: #8B0000;
-      font-weight: normal;
-      white-space: nowrap;
-    }
-    .edu img {
-      width: 40px;
-      height: auto;
-      margin-right: 10px;
-    }
-    .edu > div {
-      display: flex;
       align-items: center;
-      flex: 1;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
     }
-    .edu span {
-      color: #8B0000;
-      font-weight: normal;
-      white-space: nowrap;
-    }
-    .summary-social {
-      margin-top: 2rem;
-    }
-    .summary-social a {
-      margin-right: 1.2rem;
-      font-size: 2.5rem;
-    }
+    .edu img { width: 40px; height: auto; margin-right: 10px; }
+    .edu > div { display: flex; align-items: center; }
+    .edu span { color: #8B0000; font-weight: normal; white-space: nowrap; }
+    .summary-social { margin-top: 2rem; }
+    .summary-social a { margin-right: 1.2rem; font-size: 2.5rem; }
     .summary-social a[href*="linkedin"] { color: #0077b5; }
     .summary-social a[href*="github"]   { color: #333; }
     .skill-group {
@@ -163,7 +126,6 @@
         <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="tech-icon">
       </div>
     </aside>
-
     <main>
       <!-- SUMMARY -->
       <section class="section" id="summary">
@@ -177,7 +139,6 @@
           <a href="https://github.com/Jajo9147"           target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </section>
-
       <!-- EXPERIENCE -->
       <section class="section" id="experience">
         <h2>Experience</h2>
@@ -214,7 +175,7 @@
         </ul>
         <div class="position-date"><strong>Operations Manager, North Carolina</strong><span class="date">Jul 2016 – Jun 2018</span></div>
         <ul>
-          <li>Trained and led 45 personnel to support a company in a fast-paced environment, increasing readiness</li>
+          <li>Tr训练 and led 45 personnel to support a company in a fast-paced environment, increasing readiness</li>
           <li>Mentored eight subordinates on leadership while executing 78 readiness and skills refinement events</li>
         </ul>
         <div class="company">University of Colorado</div>
@@ -223,7 +184,6 @@
           <li>Led logistics and execution for high-profile university events including a nationally televised presidential primary debate and donor summits, coordinating cross-functional teams and aligning with executive stakeholders</li>
         </ul>
       </section>
-
       <!-- EDUCATION -->
       <section class="section" id="education">
         <h2>Education</h2>
@@ -236,7 +196,6 @@
           <span>Aug 2012 – May 2016</span>
         </div>
       </section>
-
       <!-- SKILLS -->
       <section class="section" id="skills">
         <h2>Skills</h2>
@@ -253,3 +212,4 @@
   </div>
 </body>
 </html>
+
