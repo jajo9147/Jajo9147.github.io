@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; background: #f4f4f4; color: #333; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; }
     .container { display: flex; max-width: 1200px; margin: 0 auto; }
     .sidebar {
       width: 280px;
-      background: #444;
+      background: #2f3e46;
       color: white;
       padding: 2rem 1rem;
       height: 100vh;
@@ -19,36 +19,28 @@
       top: 0;
     }
     .sidebar img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
       display: block;
       margin: 0 auto 1rem;
-      border: 4px solid white;
+      border: 3px solid white;
     }
     .sidebar h1 {
       text-align: center;
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
     }
-    .sidebar p, .sidebar a {
-      text-align: center;
-      display: block;
-      color: #ccc;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
     .sidebar nav a {
       display: block;
       padding: 0.5rem 1rem;
-      color: white;
+      color: #a8dadc;
       text-decoration: none;
       margin: 0.2rem 0;
     }
     .sidebar nav a:hover {
-      background: #666;
+      background: #457b9d;
     }
     .social-icons {
       text-align: center;
@@ -61,17 +53,30 @@
     }
     main {
       flex-grow: 1;
-      padding: 2rem;
+      padding: 3rem;
       background: white;
     }
-    section { margin-bottom: 2rem; }
-    section h2 {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    header .info {
+      text-align: right;
+    }
+    header .info p {
+      margin-bottom: 0.3rem;
+    }
+    h2 {
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.25rem;
       margin-bottom: 1rem;
+      font-size: 1.2rem;
     }
+    section { margin-bottom: 2rem; }
     ul { padding-left: 1.5rem; list-style: disc; }
-    a { color: #007acc; }
+    a { color: #1d3557; }
   </style>
 </head>
 <body>
@@ -79,9 +84,6 @@
     <aside class="sidebar">
       <img src="Jake%20Johnson.jpeg" alt="Jake Johnson">
       <h1>Jake Johnson</h1>
-      <p>Colorado</p>
-      <a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a>
-      <p>(919) 525-0063</p>
       <nav>
         <a href="#summary">SUMMARY</a>
         <a href="#experience">EXPERIENCE</a>
@@ -95,56 +97,86 @@
     </aside>
 
     <main>
+      <header>
+        <div></div>
+        <div class="info">
+          <p><i class="fas fa-map-marker-alt"></i> Colorado Springs, CO</p>
+          <p><a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a></p>
+          <p>(919) 525-0063</p>
+        </div>
+      </header>
+
       <section id="summary">
         <h2>Summary</h2>
-        <p>Results-driven Associate Director of Data Science with 12 years of leadership experience, including time as a U.S. Army Ranger. Proven success delivering over $28M in business value through AI/ML, strategic analytics, and operational excellence.</p>
+        <p><strong>STRENGTHS:</strong> DATA SCIENCE | AI/ML | BUSINESS STRATEGY | FINANCE | LEADERSHIP | ANALYTICS | OPERATIONS</p>
+        <p>Results-driven Associate Director of Data Science with 12 years of leadership experience, including time as a U.S. Army Ranger. Proven success delivering over $28M in business value through AI/ML, strategic analytics, and operational excellence. Skilled in managing cross-functional teams, driving campaign effectiveness, and developing automated solutions that scale. MBA from UT Austin’s McCombs School of Business. Passionate about solving complex business problems with data-driven solutions, seeking to lead cross-functional teams where AI and insight unlock business growth.</p>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
-        <h3>Verizon | Associate Director - Data Science (2024–Present)</h3>
+        <h3>Verizon</h3>
+        <p><strong>Associate Director - Data Science, Colorado</strong> | Jan 2024 – Current</p>
         <ul>
-          <li>Drove 15% lift in campaign revenue attribution via scalable ML solutions</li>
-          <li>Improved sales attribution tracking with Finance collaboration</li>
-          <li>Saved project approval time 40% with new governance model</li>
-          <li>Led 6-person team improving delivery speed 40%</li>
+          <li>Built scalable machine learning solutions that drove a 15% lift in campaign revenue attribution by improving decision intelligence across marketing channels</li>
+          <li>Partnered with Finance to implement a model evaluation system that tied model impact to sales attribution, surfacing 20–30% of influence in top campaigns</li>
+          <li>Established a governance model intake and validation framework, reducing project approval time by 40% and prioritizing high-impact initiatives, contributing to $28M+ in business value over the year</li>
+          <li>Led a six-person data science team; accelerated model delivery by 40% and reduced bottlenecks by 20% through agile workflows and stakeholder alignment</li>
         </ul>
-        <h3>Senior Data Scientist (2023–2024)</h3>
+        <p><strong>Senior Data Scientist, Texas</strong> | Jan 2023 – Jan 2024</p>
         <ul>
-          <li>Automated trouble ticket research, saving $5M annually</li>
-          <li>Created Mobile to Fios referral tool; +$15M revenue, 95K referrals</li>
-          <li>Built first VHI-Mobile conversion dashboard at block group level</li>
+          <li>Automated Verizon trouble tickets through data visualizations, cutting 1,490 hours of research and decreasing dispatching equipment with a cost savings of $5M a year</li>
+          <li>Collaborated with two senior vice presidents to develop a data visualization for Verizon's Mobile to Fios Referrals, incentivizing call agents to drive new accounts and increase revenue $15M with over 95K referrals a year</li>
+          <li>Designed and developed Verizon's first Qlik dashboard to analyze block group-level data, identifying opportunities to convert Verizon Home Internet customers into joint subscribers of both VHI and Mobile services</li>
         </ul>
-        <h3>Dimensional Fund Advisors | MBA Consultant (2023)</h3>
+
+        <h3>Dimensional Fund Advisors</h3>
+        <p><strong>Consultant - MBA Capstone Project, Texas</strong> | Jan 2023 – Jun 2023</p>
         <ul>
-          <li>Improved client satisfaction with analytics across finance datasets</li>
+          <li>Enhanced client financial satisfaction with analytics in the finance industry’s largest dataset for a top management firm</li>
         </ul>
-        <h3>U.S. Army, 75th Ranger Regiment | Finance & Ops Manager (2016–2023)</h3>
+
+        <h3>U.S. Army: 75th Ranger Regiment</h3>
+        <p><strong>Senior Finance Manager, Georgia</strong> | Jan 2021 – Jan 2023</p>
         <ul>
-          <li>Managed $102M portfolio, led 17-person team</li>
-          <li>Reduced reporting time 30% through redesigned workflows</li>
-          <li>Directed 32 airborne operations, all casualty-free</li>
+          <li>Led a 17-member team through business process redesign of reporting workflow, optimizing data extraction for critical insights, and achieving a 30% reduction in program office reporting time</li>
+          <li>Supervised quarterly trend analytics reviews in SAP, organizing KPI metrics against annual spending plans for a company with 5,000+ personnel and a $102M annual portfolio</li>
+          <li>Evaluated adequacy of controls with corporate policies and regulatory requirements, making recommendations to improve efficiencies and reducing annual contract costs by $5M</li>
         </ul>
-        <h3>University of Colorado | Program Manager (2013–2016)</h3>
+        <p><strong>Technology Program Manager, North Carolina</strong> | Jun 2018 – Jan 2021</p>
         <ul>
-          <li>Led presidential debate logistics & donor summits</li>
+          <li>Advised executive leadership through intelligence dashboards to strategically realign placement of 600 personnel, resulting in a 3-hour preparation time saving and efficient crisis response throughout Afghanistan</li>
+          <li>Planned, programmed, and directed 32 airborne operations with no casualties, utilizing data visualization dashboards</li>
+        </ul>
+        <p><strong>Operations Manager, North Carolina</strong> | Jul 2016 – Jun 2018</p>
+        <ul>
+          <li>Trained and led 45 personnel to support a company in a fast-paced environment, increasing readiness</li>
+          <li>Mentored eight subordinates on leadership while executing 78 readiness and skills refinement events</li>
+        </ul>
+
+        <h3>University of Colorado</h3>
+        <p><strong>Program Manager – Strategic Events, Colorado</strong> | Aug 2013 – Jun 2016</p>
+        <ul>
+          <li>Led logistics and execution for high-profile university events including a nationally televised presidential primary debate and donor summits, coordinating cross-functional teams and aligning with executive stakeholders</li>
         </ul>
       </section>
 
       <section id="education">
         <h2>Education</h2>
-        <p><strong>UT Austin – McCombs School of Business</strong><br>MBA, Data Analytics & Strategy (2023–2025)</p>
-        <p><strong>University of Colorado Boulder</strong><br>B.S., Political Science / Economics (2012–2016)</p>
+        <p><strong>The University of Texas at Austin, McCombs School of Business</strong> — MBA, Data Analytics & Strategy | Aug 2023 – May 2025</p>
+        <p><strong>University of Colorado at Boulder, Leeds School of Business</strong> — B.S. in Political Science / Economics | Aug 2012 – May 2016</p>
       </section>
 
       <section id="skills">
         <h2>Skills</h2>
         <ul>
           <li>Languages: Python, SQL, R, CSS, HTML5</li>
-          <li>Cloud: GCP, AWS, Azure, BigQuery, Hadoop, SAP-ERP</li>
-          <li>Visualization: Qlik, Power BI, Tableau, Looker, ThoughtSpot</li>
-          <li>Certifications: Ranger, Lean Six Sigma, Agile, Prompt Engineer</li>
-          <li>Tools: TensorFlow, PyTorch, H2O.ai, MLflow, GitHub</li>
+          <li>Project & Workflow Tools: Jira, Workfront, Advana, Engram, Smartsheets</li>
+          <li>Certifications: Army Ranger, Lean Six Sigma, Verizon Leadership Development Program, USC Data Analytics, Prompt Engineer, Data 401 & 101, Advanced Comptroller, Defense Financial Management, DoD TS (SCI) Security Clearance, Agile</li>
+          <li>Tools & Libraries: Jupyter, TensorFlow, PyTorch, H2O.ai, MLflow, GitHub, GitLab, Monte Carlo Simulation, Anaconda</li>
+          <li>Visualization & Analytics Platforms: Qlik, Power BI, Tableau, Looker, ThoughtSpot, Grafana, AIMLOPS</li>
+          <li>Cloud & Big Data Platforms: GCP, AWS, Azure, BigQuery, Hadoop, Aster, Teradata, Variant, SAP-ERP, Oracle, SQL Server, Toad, Access</li>
+          <li>Affiliations & Volunteer Work: Three Rangers Foundation, VALOR Employee Resource Group (ERG), GallantFew</li>
+          <li>Work Eligibility: Eligible to work in the U.S. with no restrictions</li>
         </ul>
       </section>
     </main>
