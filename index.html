@@ -4,60 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jake Johnson | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', sans-serif; background: #f4f4f4; color: #333; }
+    .container { display: flex; max-width: 1200px; margin: 0 auto; }
     .sidebar {
       width: 280px;
-      background: #1e1e1e;
-      color: #fff;
+      background: #444;
+      color: white;
       padding: 2rem 1rem;
+      height: 100vh;
       position: sticky;
       top: 0;
-      height: 100vh;
     }
     .sidebar img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+      border: 4px solid white;
     }
     .sidebar h1 {
-      font-size: 1.5rem;
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
     }
-    .sidebar a {
-      color: #66b3ff;
+    .sidebar p, .sidebar a {
+      text-align: center;
+      display: block;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
       text-decoration: none;
     }
-    .main {
+    .sidebar nav a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+      margin: 0.2rem 0;
+    }
+    .sidebar nav a:hover {
+      background: #666;
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    main {
       flex-grow: 1;
       padding: 2rem;
-      background: #fff;
+      background: white;
     }
-    h2 {
-      border-bottom: 2px solid #eee;
+    section { margin-bottom: 2rem; }
+    section h2 {
+      border-bottom: 2px solid #ddd;
       padding-bottom: 0.25rem;
-      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
+    ul { padding-left: 1.5rem; list-style: disc; }
+    a { color: #007acc; }
   </style>
 </head>
 <body>
@@ -65,19 +79,28 @@
     <aside class="sidebar">
       <img src="Jake%20Johnson.jpeg" alt="Jake Johnson">
       <h1>Jake Johnson</h1>
-      <p>Colorado<br>
-      <a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a><br>
-      (919) 525-0063</p>
-      <p><a href="https://www.linkedin.com/in/jake-johnson-/" target="_blank">LinkedIn Profile</a></p>
+      <p>Colorado</p>
+      <a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a>
+      <p>(919) 525-0063</p>
+      <nav>
+        <a href="#summary">SUMMARY</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#skills">SKILLS</a>
+      </nav>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/jake-johnson-/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Jajo9147" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
     </aside>
 
-    <main class="main">
-      <section>
+    <main>
+      <section id="summary">
         <h2>Summary</h2>
         <p>Results-driven Associate Director of Data Science with 12 years of leadership experience, including time as a U.S. Army Ranger. Proven success delivering over $28M in business value through AI/ML, strategic analytics, and operational excellence.</p>
       </section>
 
-      <section>
+      <section id="experience">
         <h2>Experience</h2>
         <h3>Verizon | Associate Director - Data Science (2024–Present)</h3>
         <ul>
@@ -108,13 +131,13 @@
         </ul>
       </section>
 
-      <section>
+      <section id="education">
         <h2>Education</h2>
         <p><strong>UT Austin – McCombs School of Business</strong><br>MBA, Data Analytics & Strategy (2023–2025)</p>
         <p><strong>University of Colorado Boulder</strong><br>B.S., Political Science / Economics (2012–2016)</p>
       </section>
 
-      <section>
+      <section id="skills">
         <h2>Skills</h2>
         <ul>
           <li>Languages: Python, SQL, R, CSS, HTML5</li>
@@ -128,4 +151,3 @@
   </div>
 </body>
 </html>
-
