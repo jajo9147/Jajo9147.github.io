@@ -20,8 +20,8 @@
       align-items: center;
     }
     .sidebar img {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #fff;
@@ -46,7 +46,7 @@
     }
     .section {
       flex: 1;
-      padding: 4rem;
+      padding: 5rem;
       min-width: 0;
       scroll-snap-align: start;
     }
@@ -70,7 +70,7 @@
     }
     h2 {
       font-size: 1.3rem;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.5rem;
     }
@@ -79,10 +79,14 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
     }
     .edu strong { display: block; }
+    .edu span {
+      color: red;
+      font-weight: 500;
+    }
     .skills li::before {
       content: '\2022';
       color: #457b9d;
@@ -98,6 +102,19 @@
       color: #333;
       margin-right: 1rem;
       font-size: 1.3rem;
+    }
+    .company {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+    .position-date {
+      display: flex;
+      justify-content: space-between;
+      color: #333;
+    }
+    .position-date span.date {
+      color: red;
     }
   </style>
 </head>
@@ -128,7 +145,8 @@
 
       <section class="section" id="experience">
         <h2>Experience</h2>
-        <div class="job"><strong>Associate Director - Data Science, Verizon, Colorado</strong><span>Jan 2024 – Current</span></div>
+        <div class="company">Verizon</div>
+        <div class="position-date"><strong>Associate Director - Data Science, Colorado</strong><span class="date">Jan 2024 – Current</span></div>
         <ul>
           <li>Built scalable machine learning solutions that drove a 15% lift in campaign revenue attribution</li>
           <li>Partnered with Finance to tie model impact to sales attribution</li>
@@ -136,36 +154,39 @@
           <li>Led 6-person team, accelerated model delivery 40%</li>
         </ul>
 
-        <div class="job"><strong>Senior Data Scientist, Verizon, Texas</strong><span>Jan 2023 – Jan 2024</span></div>
+        <div class="position-date"><strong>Senior Data Scientist, Texas</strong><span class="date">Jan 2023 – Jan 2024</span></div>
         <ul>
           <li>Automated Verizon trouble tickets saving $5M annually</li>
           <li>Boosted revenue $15M via Mobile to Fios Referrals dashboard</li>
           <li>Developed VHI conversion dashboard at block-group level</li>
         </ul>
 
-        <div class="job"><strong>Consultant - MBA Capstone Project, Dimensional Fund Advisors, Texas</strong><span>Jan 2023 – Jun 2023</span></div>
+        <div class="company">Dimensional Fund Advisors</div>
+        <div class="position-date"><strong>Consultant - MBA Capstone Project, Texas</strong><span class="date">Jan 2023 – Jun 2023</span></div>
         <ul><li>Enhanced client financial satisfaction using advanced analytics</li></ul>
 
-        <div class="job"><strong>Senior Finance Manager, U.S. Army, Georgia</strong><span>Jan 2021 – Jan 2023</span></div>
+        <div class="company">U.S. Army: 75th Ranger Regiment</div>
+        <div class="position-date"><strong>Senior Finance Manager, Georgia</strong><span class="date">Jan 2021 – Jan 2023</span></div>
         <ul>
           <li>Led 17-person team and reduced reporting time by 30%</li>
           <li>Managed $102M portfolio and ensured regulatory compliance</li>
           <li>Cut contract costs by $5M through operational improvements</li>
         </ul>
 
-        <div class="job"><strong>Technology Program Manager, U.S. Army, North Carolina</strong><span>Jun 2018 – Jan 2021</span></div>
+        <div class="position-date"><strong>Technology Program Manager, North Carolina</strong><span class="date">Jun 2018 – Jan 2021</span></div>
         <ul>
           <li>Realigned 600 personnel based on dashboard insights</li>
           <li>Planned and executed 32 operations with no casualties</li>
         </ul>
 
-        <div class="job"><strong>Operations Manager, U.S. Army, North Carolina</strong><span>Jul 2016 – Jun 2018</span></div>
+        <div class="position-date"><strong>Operations Manager, North Carolina</strong><span class="date">Jul 2016 – Jun 2018</span></div>
         <ul>
           <li>Led and trained 45 personnel in high-tempo operations</li>
           <li>Oversaw 78 readiness and development events</li>
         </ul>
 
-        <div class="job"><strong>Program Manager – Strategic Events, University of Colorado</strong><span>Aug 2013 – Jun 2016</span></div>
+        <div class="company">University of Colorado</div>
+        <div class="position-date"><strong>Program Manager – Strategic Events, Colorado</strong><span class="date">Aug 2013 – Jun 2016</span></div>
         <ul>
           <li>Led planning for presidential debates and donor events</li>
         </ul>
@@ -174,11 +195,11 @@
       <section class="section" id="education">
         <h2>Education</h2>
         <div class="edu">
-          <div><strong>The University of Texas at Austin</strong><br>MBA<br>Data Analytics & Strategy</div>
+          <div><strong>The University of Texas at Austin</strong><br>MBA: Data Analytics & Strategy</div>
           <span>Aug 2023 – May 2025</span>
         </div>
         <div class="edu">
-          <div><strong>University of Colorado at Boulder</strong><br>B.S.<br>Political Science / Economics</div>
+          <div><strong>University of Colorado at Boulder</strong><br>B.S.: Political Science / Economics</div>
           <span>Aug 2012 – May 2016</span>
         </div>
       </section>
@@ -189,9 +210,13 @@
           <li><i class="fab fa-python"></i> Python</li>
           <li><i class="fas fa-database"></i> SQL, R</li>
           <li><i class="fab fa-css3-alt"></i> CSS, HTML5</li>
-          <li><i class="fas fa-cloud"></i> AWS, GCP, Azure, BigQuery</li>
-          <li><i class="fas fa-chart-line"></i> Qlik, Power BI, Tableau</li>
-          <li><i class="fas fa-check-circle"></i> Lean Six Sigma, Agile, Army Ranger</li>
+          <li><i class="fas fa-cloud"></i> AWS, GCP, Azure, BigQuery, Hadoop, Aster, Teradata, SAP-ERP, Oracle, SQL Server, Toad, Access</li>
+          <li><i class="fas fa-chart-line"></i> Qlik, Power BI, Tableau, Looker, ThoughtSpot, Grafana, AIMLOPS</li>
+          <li><i class="fas fa-cogs"></i> Jupyter, TensorFlow, PyTorch, H2O.ai, MLflow, GitHub, GitLab, Monte Carlo Simulation, Anaconda</li>
+          <li><i class="fas fa-tools"></i> Jira, Workfront, Advana, Engram, Smartsheets</li>
+          <li><i class="fas fa-certificate"></i> Army Ranger, Lean Six Sigma, Agile, USC Data Analytics, Prompt Engineer, Data 401 & 101, Advanced Comptroller, Defense Financial Management, DoD TS (SCI) Clearance</li>
+          <li><i class="fas fa-hands-helping"></i> Three Rangers Foundation, VALOR ERG, GallantFew</li>
+          <li><i class="fas fa-check"></i> Work Eligibility: U.S. – No Restrictions</li>
         </ul>
       </section>
     </main>
