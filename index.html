@@ -3,98 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jake Johnson | Resume</title>
+  <title>Jake Johnson | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Open Sans', sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f5f5f5;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
       color: #333;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    h1, h2, h3 {
-      color: #2c3e50;
+    .sidebar {
+      width: 280px;
+      background: #1e1e1e;
+      color: #fff;
+      padding: 2rem 1rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
     }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .section h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.25rem;
+    .sidebar img {
+      width: 100%;
+      border-radius: 8px;
       margin-bottom: 1rem;
     }
-    ul {
-      list-style: disc inside;
-      padding-left: 1rem;
+    .sidebar h1 {
+      font-size: 1.5rem;
     }
-    .contact {
-      font-size: 0.9rem;
+    .sidebar a {
+      color: #66b3ff;
+      text-decoration: none;
+    }
+    .main {
+      flex-grow: 1;
+      padding: 2rem;
+      background: #fff;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    section {
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Jake Johnson</h1>
-    <p class="contact">Colorado | <a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a> | (919) 525-0063<br>
-    <a href="https://www.linkedin.com/in/jake-johnson-/" target="_blank">LinkedIn</a></p>
+    <aside class="sidebar">
+      <img src="Jake%20Johnson.jpeg" alt="Jake Johnson">
+      <h1>Jake Johnson</h1>
+      <p>Colorado<br>
+      <a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a><br>
+      (919) 525-0063</p>
+      <p><a href="https://www.linkedin.com/in/jake-johnson-/" target="_blank">LinkedIn Profile</a></p>
+    </aside>
 
-    <div class="section">
-      <h2>Summary</h2>
-      <p>Results-driven Associate Director of Data Science with 12 years of leadership experience, including time as a U.S. Army Ranger. Proven success delivering over $28M in business value through AI/ML, strategic analytics, and operational excellence.</p>
-    </div>
+    <main class="main">
+      <section>
+        <h2>Summary</h2>
+        <p>Results-driven Associate Director of Data Science with 12 years of leadership experience, including time as a U.S. Army Ranger. Proven success delivering over $28M in business value through AI/ML, strategic analytics, and operational excellence.</p>
+      </section>
 
-    <div class="section">
-      <h2>Experience</h2>
-      <h3>Verizon | Associate Director - Data Science (2024 – Present)</h3>
-      <ul>
-        <li>Improved marketing campaign revenue attribution by 15% through ML solutions.</li>
-        <li>Partnered with Finance to tie model impact to sales attribution.</li>
-        <li>Established governance model intake reducing approval time by 40%.</li>
-      </ul>
-      <h3>Senior Data Scientist (2023 – 2024)</h3>
-      <ul>
-        <li>Saved $5M annually automating trouble tickets.</li>
-        <li>Designed Mobile to Fios referral visualizations boosting revenue $15M.</li>
-      </ul>
-      <h3>Dimensional Fund Advisors | Consultant (2023)</h3>
-      <ul>
-        <li>Enhanced client financial satisfaction using analytics.</li>
-      </ul>
-      <h3>U.S. Army | Senior Finance Manager & Program Manager (2016 – 2023)</h3>
-      <ul>
-        <li>Managed a $102M portfolio and 17-member team.</li>
-        <li>Planned 32 operations with zero casualties using data dashboards.</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Experience</h2>
+        <h3>Verizon | Associate Director - Data Science (2024–Present)</h3>
+        <ul>
+          <li>Drove 15% lift in campaign revenue attribution via scalable ML solutions</li>
+          <li>Improved sales attribution tracking with Finance collaboration</li>
+          <li>Saved project approval time 40% with new governance model</li>
+          <li>Led 6-person team improving delivery speed 40%</li>
+        </ul>
+        <h3>Senior Data Scientist (2023–2024)</h3>
+        <ul>
+          <li>Automated trouble ticket research, saving $5M annually</li>
+          <li>Created Mobile to Fios referral tool; +$15M revenue, 95K referrals</li>
+          <li>Built first VHI-Mobile conversion dashboard at block group level</li>
+        </ul>
+        <h3>Dimensional Fund Advisors | MBA Consultant (2023)</h3>
+        <ul>
+          <li>Improved client satisfaction with analytics across finance datasets</li>
+        </ul>
+        <h3>U.S. Army, 75th Ranger Regiment | Finance & Ops Manager (2016–2023)</h3>
+        <ul>
+          <li>Managed $102M portfolio, led 17-person team</li>
+          <li>Reduced reporting time 30% through redesigned workflows</li>
+          <li>Directed 32 airborne operations, all casualty-free</li>
+        </ul>
+        <h3>University of Colorado | Program Manager (2013–2016)</h3>
+        <ul>
+          <li>Led presidential debate logistics & donor summits</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>The University of Texas at Austin</strong> — MBA, Data Analytics & Strategy (2023–2025)</p>
-      <p><strong>University of Colorado at Boulder</strong> — B.S. in Political Science / Economics (2012–2016)</p>
-    </div>
+      <section>
+        <h2>Education</h2>
+        <p><strong>UT Austin – McCombs School of Business</strong><br>MBA, Data Analytics & Strategy (2023–2025)</p>
+        <p><strong>University of Colorado Boulder</strong><br>B.S., Political Science / Economics (2012–2016)</p>
+      </section>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: Python, SQL, R, CSS, HTML5</li>
-        <li>Cloud: AWS, GCP, Azure</li>
-        <li>Tools: Jupyter, TensorFlow, Qlik, Tableau, GitHub</li>
-        <li>Certifications: Army Ranger, Lean Six Sigma, Agile</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>Languages: Python, SQL, R, CSS, HTML5</li>
+          <li>Cloud: GCP, AWS, Azure, BigQuery, Hadoop, SAP-ERP</li>
+          <li>Visualization: Qlik, Power BI, Tableau, Looker, ThoughtSpot</li>
+          <li>Certifications: Ranger, Lean Six Sigma, Agile, Prompt Engineer</li>
+          <li>Tools: TensorFlow, PyTorch, H2O.ai, MLflow, GitHub</li>
+        </ul>
+      </section>
+    </main>
   </div>
 </body>
 </html>
+
