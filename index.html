@@ -8,8 +8,8 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
     html, body { height: 100%; scroll-behavior: smooth; }
-    body { background: #f7f9fa; color: #333; }
-    .container { display: flex; height: 100vh; overflow: hidden; }
+    body { background: #f7f9fa; color: #333; display: flex; }
+    .container { display: flex; width: 100%; }
     .sidebar {
       width: 250px;
       background: #3a3f47;
@@ -63,18 +63,16 @@
       50% { transform: scale(1.05); opacity: 0.5; }
       100% { transform: scale(1); opacity: 0.3; }
     }
-    .section {
-      flex: 1;
-      padding: 8rem 5rem;
-      max-width: 800px;
-      margin: auto;
-      scroll-snap-align: start;
-    }
     main {
       flex-grow: 1;
       height: 100vh;
       overflow-y: scroll;
       scroll-snap-type: y mandatory;
+    }
+    .section {
+      scroll-snap-align: start;
+      padding: 8rem 4rem 8rem 3rem;
+      max-width: 980px;
     }
     .title {
       font-size: 2.2rem;
@@ -110,9 +108,6 @@
     .edu img {
       width: 40px;
       height: auto;
-    }
-    .skills li::before {
-      content: '';
     }
     .summary-social {
       margin-top: 1.5rem;
@@ -165,7 +160,6 @@
         <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="tech-icon">
       </div>
     </aside>
-
     <main>
       <section class="section" id="summary">
         <h1 class="title">JAKE JOHNSON</h1>
@@ -181,7 +175,7 @@
 
       <section class="section" id="experience">
         <h2>Experience</h2>
-        <!-- experience stays unchanged -->
+        <!-- EXPERIENCE CONTENT REMAINS UNCHANGED FROM PREVIOUS VERSION -->
       </section>
 
       <section class="section" id="education">
@@ -200,7 +194,7 @@
 
       <section class="section" id="skills">
         <h2>Skills</h2>
-        <!-- skills stay unchanged -->
+        <!-- SKILLS CONTENT REMAINS UNCHANGED FROM PREVIOUS VERSION -->
       </section>
     </main>
   </div>
