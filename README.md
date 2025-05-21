@@ -1,4 +1,4 @@
-# Resume
+# 📝 Resume
 
 This repository contains my personal resume and project portfolio.
 
