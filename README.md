@@ -1,6 +1,6 @@
 # Resume
 
-This repository contains my personal resume and portfolio Jake Johnson.
+This repository contains my personal resume and project portfolio.
 
 ## 🧠 Machine Learning Projects
 
