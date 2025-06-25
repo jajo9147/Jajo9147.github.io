@@ -90,7 +90,7 @@
       scroll-margin-top: 4rem;
     }
 
-    .title   { font-size: 2.2rem; font-weight: bold; color: #2d2d2d; }
+    .title    { font-size: 2.2rem; font-weight: bold; color: #2d2d2d; }
     .contact { font-size: 0.95rem; margin-top: 0.3rem; }
     .contact i { color: red; }
     h2 {
@@ -133,6 +133,35 @@
     }
     .skill-group div { flex: 1; }
     .skill-group i { margin-right: 0.3rem; }
+
+    /* Project Specific Styles */
+    .project {
+        margin-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #eee;
+    }
+    .project h3 {
+        font-size: 1.1rem;
+        color: #8B0000;
+        margin-bottom: 0.5rem;
+    }
+    .project p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    .project a {
+        color: #444;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .project a:hover {
+        color: #457b9d;
+    }
+    .project a img {
+        height: 28px;
+        vertical-align: middle;
+    }
+
   </style>
 </head>
 <body>
@@ -296,19 +325,32 @@
           <strong>Eligibility:</strong>
           <div><i class="fas fa-check"></i> U.S. Work Eligible – No Restrictions</div>
         </div>
-        <section class="section" id="projects">
-          <h2>Projects</h2>
-          <div class="project">
-            <h3>PyTorch Tabular Binary Classifier</h3>
-            <p>A neural network built in PyTorch for binary classification on structured tabular data. Simulates real-world use cases such as customer churn prediction or ISR target classification. Achieved 89% test accuracy.</p>
-            <a href="https://github.com/jajo9147/pytorch-tabular-binary-classifier" target="_blank" style="margin-right: 12px;" title="View on GitHub">
-              <i class="fab fa-github fa-2x"></i>
-            </a>More actions
-            <a href="https://colab.research.google.com/github/jajo9147/pytorch-tabular-binary-classifier/blob/main/PyTorch_Churn_Classifier.ipynb" target="_blank">More actions
-              <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-            </a>
-          </div>
-        </section>
+      </section> <section class="section" id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>PyTorch Tabular Binary Classifier</h3>
+          <p>A neural network built in PyTorch for binary classification on structured tabular data. Simulates real-world use cases such as customer churn prediction or ISR target classification. Achieved 89% test accuracy.</p>
+          <a href="https://github.com/jajo9147/pytorch-tabular-binary-classifier" target="_blank" style="margin-right: 12px;" title="View on GitHub">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a href="https://colab.research.google.com/github/jajo9147/pytorch-tabular-binary-classifier/blob/main/PyTorch_Churn_Classifier.ipynb" target="_blank" title="Open in Google Colab">
+            <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>P5.js Dynamic Wave Animation</h3>
+          <p>A procedural wave animation built with P5.js for data visualization and BI dashboards, featuring dynamic parameters and a custom animated logo.</p>
+          <a href="https://github.com/jajo9147/dynamic-black-line-animation" target="_blank" style="margin-right: 12px;" title="View on GitHub">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a href="https://jajo9147.github.io/dynamic-black-line-animation/" target="_blank" title="View Live Demo">
+            <i class="fas fa-play-circle fa-2x"></i>
+          </a>
+        </div>
+
+      </section>
     </main>
   </div>
 </body>
