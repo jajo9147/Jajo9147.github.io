@@ -10,7 +10,7 @@ A neural network built in PyTorch for binary classification on structured tabula
 
 ## 🎨 Creative Coding & Visualization
 
-### [P5.js Dynamic Wave Animation](https://github.com/jaju0947/dynamic-black-line-animation)
+### [P5.js Dynamic Wave Animation](https://github.com/jajo9147/dynamic-black-line-animation)
 A procedural wave animation built with P5.js, designed for embedding in BI dashboards and presentations. The animation's rhythm is controlled by mathematical parameters, featuring a wave whose frequency and amplitude change dynamically across the screen. Includes a custom-drawn, animated logo with gradient effects and is hosted via GitHub Pages for live embedding.
 <br>
 **[🚀 View Live Demo](https://jajo9147.github.io/dynamic-black-line-animation/)**
