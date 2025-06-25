@@ -1,314 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1280" />
-  <title>Jake Johnson | Portfolio</title>
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-    html, body { height: 100%; scroll-behavior: smooth; }
-    body {
-      background: #f7f9fa;
-      color: #444;
-      display: flex;
-      justify-content: center;
-      overflow-x: auto;
-    }
-
-    .container {
-      display: flex;
-      width: 1280px;
-      min-height: 100vh;
-    }
-
-    .sidebar {
-      width: 250px;
-      background: #3a3f47;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-    }
-    .sidebar-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .sidebar img {
-      width: 160px; height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      margin-bottom: 1rem;
-    }
-    .sidebar nav {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .sidebar nav a {
-      color: #a8dadc; text-decoration: none;
-      text-align: center; font-weight: bold;
-      padding: 0.5rem; font-size: 0.95rem;
-    }
-    .sidebar nav a:hover { background: #457b9d; }
-
-    .sidebar-footer {
-      text-align: center; padding: 1rem 0;
-    }
-    .sidebar-footer img {
-      width: 60px; height: 60px;
-      object-fit: contain; opacity: 0.3;
-      animation: pulse 4s infinite ease-in-out;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.3; }
-      50% { transform: scale(1.05); opacity: 0.5; }
-      100% { transform: scale(1); opacity: 0.3; }
-    }
-
-    main {
-      flex-grow: 1;
-      height: 100vh;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-    }
-    .section {
-      scroll-snap-align: start;
-      padding: 16rem 4rem 16rem 3rem;
-      max-width: 980px;
-      line-height: 1.75;
-    }
-
-    #experience {
-      padding-top: 4rem !important;
-      scroll-margin-top: 4rem;
-    }
-
-    .title   { font-size: 2.2rem; font-weight: bold; color: #2d2d2d; }
-    .contact { font-size: 0.95rem; margin-top: 0.3rem; }
-    .contact i { color: red; }
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 3rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-      color: #222;
-    }
-    ul { margin-left: 1.5rem; padding-left: 1rem; }
-
-    .company { font-size: 1.2rem; font-weight: bold; margin-top: 2rem; color: #8B0000; }
-    .position-date {
-      display: flex; justify-content: space-between; color: #333;
-    }
-    .position-date .date {
-      color: #8B0000; white-space: nowrap; font-weight: normal;
-    }
-
-    .edu {
-      display: flex; justify-content: space-between;
-      align-items: center; margin-bottom: 1.5rem; gap: 1rem;
-    }
-    .edu img { width: 40px; margin-right: 10px; }
-    .edu > div { display: flex; align-items: center; }
-    .edu span { color: #8B0000; white-space: nowrap; font-weight: normal; }
-
-    .summary-social { margin-top: 2rem; }
-    .summary-social a {
-      margin-right: 1.2rem; font-size: 2.5rem;
-    }
-    .summary-social a[href*="linkedin"] { color: #0077b5; }
-    .summary-social a[href*="github"] { color: #333; }
-
-    .skill-group {
-      display: flex; align-items: flex-start; margin-bottom: 1rem;
-    }
-    .skill-group strong {
-      width: 140px; flex-shrink: 0;
-    }
-    .skill-group div { flex: 1; }
-    .skill-group i { margin-right: 0.3rem; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <aside class="sidebar">
-      <div class="sidebar-content">
-        <img src="Jake Johnson.jpeg" alt="Jake Johnson">
-        <nav>
-          <a href="#summary">SUMMARY</a>
-          <a href="#experience">EXPERIENCE</a>
-          <a href="#education">EDUCATION</a>
-          <a href="#skills">SKILLS</a>
-          <a href="#projects">PROJECTS</a>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jake Johnson | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Jake Johnson</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="sidebar-footer">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="tech-icon">
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Jake Johnson</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
-    </aside>
-
-    <main>
-      <section class="section" id="summary">
-        <h1 class="title">JAKE JOHNSON</h1>
-        <p class="contact">
-          <i class="fas fa-map-marker-alt"></i> Colorado Springs, CO |
-          📧 <a href="mailto:jajo9147@gmail.com">jajo9147@gmail.com</a> |
-          📱 (919) 525-0063
-        </p><br>
-        <p><strong>STRENGTHS:</strong> DATA SCIENCE | AI/ML | BUSINESS STRATEGY | FINANCE | LEADERSHIP | ANALYTICS | OPERATIONS</p><br>
-        <p>Results-driven Associate Director of Data Science with 12 years of leadership experience, including time as a U.S. Army Ranger. Proven success delivering over $28M in business value through AI/ML, strategic analytics, and operational excellence. Skilled in managing cross-functional teams, driving campaign effectiveness, and developing automated solutions that scale. MBA from UT Austin’s McCombs School of Business. Passionate about solving complex business problems with data-driven solutions, seeking to lead cross-functional teams where AI and insight unlock business growth.</p>
-        <div class="summary-social">
-          <a href="https://www.linkedin.com/in/jake-johnson-/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/Jajo9147" target="_blank"><i class="fab fa-github"></i></a>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Jake Johnson profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Jake Johnson</h1>
+        <p class="section__text__p2">Machine Learning Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
-      </section>
-
-      <section class="section" id="experience">
-        <h2>Experience</h2>
-        <div class="company">Verizon</div>
-        <div class="position-date">
-          <strong>Associate Director – Data Science, Colorado</strong>
-          <span class="date">Jan 2024 – Current</span>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
         </div>
-        <ul>
-          <li>Built scalable machine learning solutions that drove a 15% lift in campaign revenue attribution by improving decision intelligence across marketing channels</li>
-          <li>Partnered with Finance to implement a model evaluation system that tied model impact to sales attribution, surfacing 20–30% of influence in top campaigns</li>
-          <li>Established a governance model intake and validation framework, reducing project approval time by 40% and prioritizing high-impact initiatives, contributing to $28M+ in business value over the year</li>
-          <li>Led a six-person data science team; accelerated model delivery by 40% and reduced bottlenecks by 20% through agile workflows and stakeholder alignment</li>
-        </ul>
-
-        <div class="position-date">
-          <strong>Senior Data Scientist, Texas</strong>
-          <span class="date">Jan 2023 – Jan 2024</span>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-        <ul>
-          <li>Automated Verizon trouble tickets through data visualizations, cutting 1,490 hours of research and decreasing dispatching equipment with a cost savings of $5M a year</li>
-          <li>Collaborated with two senior vice presidents to develop a data visualization for Verizon's Mobile to Fios Referrals, incentivizing call agents to drive new accounts and increase revenue $15M with over 95K referrals a year</li>
-          <li>Designed and developed Verizon's first Qlik dashboard to analyze block group-level data, identifying opportunities to convert Verizon Home Internet customers into joint subscribers of both VHI and Mobile services</li>
-        </ul>
-
-        <div class="company">Dimensional Fund Advisors</div>
-        <div class="position-date">
-          <strong>Consultant – MBA Capstone Project, Texas</strong>
-          <span class="date">Jan 2023 – Jun 2023</span>
-        </div>
-        <ul>
-          <li>Enhanced client financial satisfaction with analytics in the finance industry’s largest dataset for a top management firm</li>
-        </ul>
-
-        <div class="company">U.S. Army: 75th Ranger Regiment</div>
-        <div class="position-date">
-          <strong>Senior Manager – Financial Technology, Georgia</strong>
-          <span class="date">Jan 2021 – Jan 2023</span>
-        </div>
-        <ul>
-          <li>Led a 17-member team through business process redesign of reporting workflow, optimizing data extraction for critical insights, and achieving a 30% reduction in program office reporting time</li>
-          <li>Supervised quarterly trend analytics reviews in SAP, organizing KPI metrics against annual spending plans for a company with 5,000+ personnel and a $102M annual portfolio</li>
-          <li>Evaluated adequacy of controls with corporate policies and regulatory requirements, making recommendations to improve efficiencies and reducing annual contract costs by $5M</li>
-        </ul>
-
-        <div class="position-date">
-          <strong>Technology Program Manager, North Carolina</strong>
-          <span class="date">Jun 2018 – Jan 2021</span>
-        </div>
-        <ul>
-          <li>Advised executive leadership through intelligence dashboards to strategically realign placement of 600 personnel, resulting in a 3-hour preparation time saving and efficient crisis response throughout Afghanistan</li>
-          <li>Planned, programmed, and directed 32 airborne operations with no casualties, utilizing data visualization dashboards</li>
-        </ul>
-
-        <div class="position-date">
-          <strong>Operations Manager, North Carolina</strong>
-          <span class="date">Jul 2016 – Jun 2018</span>
-        </div>
-        <ul>
-          <li>Trained and led 45 personnel to support a company in a fast-paced environment, increasing readiness</li>
-          <li>Mentored eight subordinates on leadership while executing 78 readiness and skills refinement events</li>
-        </ul>
-
-        <div class="company">University of Colorado</div>
-        <div class="position-date">
-          <strong>Program Manager – Strategic Events, Colorado</strong>
-          <span class="date">Aug 2013 – Jun 2016</span>
-        </div>
-        <ul>
-          <li>Led logistics and execution for high-profile university events including a nationally televised presidential primary debate and donor summits, coordinating cross-functional teams and aligning with executive stakeholders</li>
-        </ul>
-      </section>
-
-      <section class="section" id="education">
-        <h2>Education</h2>
-        <div class="edu">
-          <div>
-            <img src="UT.JPG" alt="UT Austin">
-            The University of Texas at Austin<br>
-            Master of Business Administration: Data Analytics & Strategy
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Machine Learning Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+            </div>
           </div>
-          <span>Aug 2023 – May 2025</span>
-        </div>
-        <div class="edu">
-          <div>
-            <img src="CU.JPG" alt="University of Colorado">
-            University of Colorado at Boulder<br>
-            Bachelor of Science: Political Science / Economics
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
           </div>
-          <span>Aug 2012 – May 2016</span>
         </div>
-      </section>
-
-      <section class="section" id="skills">
-        <h2>Skills</h2>
-        <div class="skill-group">
-          <strong>Languages:</strong>
-          <div><i class="fab fa-python"></i> Python, <i class="fas fa-database"></i> SQL, R, <i class="fab fa-css3-alt"></i> CSS, HTML5</div>
-        </div>
-        <div class="skill-group">
-          <strong>Cloud Platforms:</strong>
-          <div><i class="fas fa-cloud"></i> AWS, GCP, Azure, BigQuery, Hadoop, Aster, Teradata, SAP-ERP, Oracle, SQL Server, Toad, Access</div>
-        </div>
-        <div class="skill-group">
-          <strong>Visualization:</strong>
-          <div><i class="fas fa-chart-line"></i> Qlik, Power BI, Tableau, Looker, ThoughtSpot, Grafana, AIMLOPS</div>
-        </div>
-        <div class="skill-group">
-          <strong>Libraries & Tools:</strong>
-          <div><i class="fas fa-cogs"></i> Jupyter, TensorFlow, PyTorch, H2O.ai, MLflow, GitHub, GitLab, Monte Carlo Simulation, Anaconda</div>
-        </div>
-        <div class="skill-group">
-          <strong>Project Tools:</strong>
-          <div><i class="fas fa-tools"></i> Jira, Workfront, Advana, Engram, Smartsheets</div>
-        </div>
-        <div class="skill-group">
-          <strong>Certifications:</strong>
-          <div><i class="fas fa-certificate"></i> Army Ranger, Lean Six Sigma, Agile, USC Data Analytics, Prompt Engineer, Data 401 & 101, Advanced Comptroller, Defense Financial Management, DoD TS (SCI) Clearance</div>
-        </div>
-        <div class="skill-group">
-          <strong>Affiliations:</strong>
-          <div><i class="fas fa-hands-helping"></i> Three Rangers Foundation, VALOR ERG, GallantFew</div>
-        </div>
-        <div class="skill-group">
-          <strong>Eligibility:</strong>
-          <div><i class="fas fa-check"></i> U.S. Work Eligible – No Restrictions</div>
-        </div>
-        <section class="section" id="projects">
-          <h2>Projects</h2>
-          <div class="project">
-            <h3>PyTorch Tabular Binary Classifier</h3>
-            <p>A neural network built in PyTorch for binary classification on structured tabular data. Simulates real-world use cases such as customer churn prediction or ISR target classification. Achieved 89% test accuracy.</p>
-            <a href="https://github.com/jajo9147/pytorch-tabular-binary-classifier" target="_blank" style="margin-right: 12px;" title="View on GitHub">
-              <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="https://colab.research.google.com/github/jajo9147/pytorch-tabular-binary-classifier/blob/main/PyTorch_Churn_Classifier.ipynb" target="_blank">
-              <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-            </a>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Machine Learning</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PyTorch</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>NumPy</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Scikit-learn</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Pandas</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TensorFlow</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Matplotlib</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
           </div>
-        </section>
-    </main>
-  </div>
-</body>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="https://i.imgur.com/k2o2cPL.png"
+                alt="P5.js Dynamic Wave Animation"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Creative Coding & Visualization</h2>
+            <p class="project-details">A procedural wave animation built with P5.js, designed for embedding in BI dashboards. The animation's rhythm is controlled by mathematical parameters, featuring a custom-drawn, animated logo and is hosted via GitHub Pages.</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/jajo9147/dynamic-black-line-animation'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://jajo9147.github.io/dynamic-black-line-animation/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Jake Johnson. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
