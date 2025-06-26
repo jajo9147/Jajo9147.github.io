@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280" />
+  <title>Jake Johnson | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    html, body { height: 100%; scroll-behavior: smooth; }
+    body {
+      background: #f7f9fa;
+      color: #444;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+    }
+    .container { display: flex; width: 1280px; min-height: 100vh; }
+    .sidebar { width: 250px; background: #3a3f47; color: white; display: flex; flex-direction: column; height: 100vh; }
+    .sidebar-content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .sidebar img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; margin-bottom: 1rem; }
+    .sidebar nav { width: 100%; display: flex; flex-direction: column; gap: 1rem; }
+    .sidebar nav a { color: #a8dadc; text-decoration: none; text-align: center; font-weight: bold; padding: 0.5rem; font-size: 0.95rem; }
+    .sidebar nav a:hover { background: #457b9d; }
+    .sidebar-footer { text-align: center; padding: 1rem 0; }
+    .sidebar-footer img { width: 60px; height: 60px; object-fit: contain; opacity: 0.3; animation: pulse 4s infinite ease-in-out; }
+    @keyframes pulse { 0% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.05); opacity: 0.5; } 100% { transform: scale(1); opacity: 0.3; } }
+    main { flex-grow: 1; height: 100vh; overflow-y: scroll; scroll-snap-type: y mandatory; }
+    .section { scroll-snap-align: start; padding: 16rem 4rem 16rem 3rem; max-width: 980px; line-height: 1.75; }
+    #experience { padding-top: 4rem !important; scroll-margin-top: 4rem; }
+    .title { font-size: 2.2rem; font-weight: bold; color: #2d2d2d; }
+    .contact { font-size: 0.95rem; margin-top: 0.3rem; }
+    .contact i { color: red; }
+    h2 { font-size: 1.3rem; margin-top: 3rem; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; color: #222; }
+    ul { margin-left: 1.5rem; padding-left: 1rem; }
+    .company { font-size: 1.2rem; font-weight: bold; margin-top: 2rem; color: #8B0000; }
+    .position-date { display: flex; justify-content: space-between; color: #333; }
+    .position-date .date { color: #8B0000; white-space: nowrap; font-weight: normal; }
+    .project { margin-top: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
+    .project h3 { font-size: 1.1rem; color: #8B0000; margin-bottom: 0.5rem; }
+    .project p { font-size: 0.95rem; margin-bottom: 1rem; }
+    .project a { color: #444; text-decoration: none; transition: color 0.3s; }
+    .project a:hover { color: #457b9d; }
+    .project a img { height: 28px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <img src="Jake Johnson.jpeg" alt="Jake Johnson">
+        <nav>
+          <a href="#summary">SUMMARY</a>
+          <a href="#experience">EXPERIENCE</a>
+          <a href="#education">EDUCATION</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#projects">PROJECTS</a>
+        </nav>
+      </div>
+      <div class="sidebar-footer">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="tech-icon">
+      </div>
+    </aside>
+
+    <main>
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>PyTorch Tabular Binary Classifier</h3>
+          <p>A neural network built in PyTorch for binary classification on structured tabular data. Simulates real-world use cases such as customer churn prediction or ISR target classification. Achieved 89% test accuracy.</p>
+          <a href="https://github.com/jajo9147/pytorch-tabular-binary-classifier" target="_blank" style="margin-right: 12px;" title="View on GitHub"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://colab.research.google.com/github/jajo9147/pytorch-tabular-binary-classifier/blob/main/PyTorch_Churn_Classifier.ipynb" target="_blank" title="Open in Google Colab">
+            <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>P5.js Dynamic Wave Animation</h3>
+          <p>A procedural wave animation built with P5.js for data visualization and BI dashboards, featuring dynamic parameters and a custom animated logo.</p>
+          <a href="https://github.com/jajo9147/dynamic-black-line-animation" target="_blank" style="margin-right: 12px;" title="View on GitHub"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://jajo9147.github.io/dynamic-black-line-animation/" target="_blank" title="View Live Demo"><i class="fas fa-play-circle fa-2x"></i></a>
+        </div>
+
+        <div class="project">
+          <h3>Customer Churn Prediction with Flask + GitHub Pages</h3>
+          <p>An end-to-end machine learning pipeline for predicting customer churn. Includes model training in Jupyter, deployment via Flask API, and a frontend form hosted with GitHub Pages. Users input customer info and receive real-time churn probabilities using a logistic regression model.</p>
+          <a href="https://github.com/jajo9147/Customer-Churn-Prediction" target="_blank" style="margin-right: 12px;" title="View on GitHub"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://jajo9147.github.io/Customer-Churn-Prediction/" target="_blank" title="View Live Demo"><i class="fas fa-play-circle fa-2x"></i></a>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</body>
+</html>
