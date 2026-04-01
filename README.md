@@ -4,7 +4,7 @@ Personal portfolio and project showcase — Associate Director of Data Science.
 
 ## AI/ML Portfolio Dashboard
 
-A Google Apps Script web application serving as the operational dashboard for a 40+ model AI/ML portfolio. Features real-time KPI tracking, interactive model health monitoring (AUC, capture rates, scores freshness), filterable model explorer, and capital budget COP with variance analysis.
+A Google Apps Script web application serving as the operational dashboard for a 210+ model AI/ML portfolio. Features real-time KPI tracking, interactive model health monitoring (AUC, capture rates, scores freshness), filterable model explorer, and capital budget COP with variance analysis.
 
 **Tech:** Google Apps Script, JavaScript, HTML/CSS, ApexCharts, BigQuery, GCP
 
