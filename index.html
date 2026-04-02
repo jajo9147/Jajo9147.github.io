@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1280" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jake Johnson | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,8 @@
 
     .container {
       display: flex;
-      width: 1280px;
+      width: 100%;
+      max-width: 1280px;
       min-height: 100vh;
       position: relative;
       z-index: 1;
@@ -427,6 +428,123 @@
     .project:hover .tech-tags span {
       border-color: rgba(196,30,58,0.2);
       color: var(--text-secondary);
+    }
+
+    /* ── Mobile Responsive ── */
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+      .sidebar::after {
+        top: auto; left: 0; right: 0; bottom: 0;
+        width: auto; height: 3px;
+        background: linear-gradient(90deg, transparent 10%, var(--accent-gold) 50%, transparent 90%);
+      }
+      .sidebar-content {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 1.2rem;
+        gap: 1rem;
+      }
+      .sidebar img.avatar {
+        width: 50px; height: 50px;
+        margin-bottom: 0;
+      }
+      .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        margin-top: 0;
+      }
+      .sidebar nav a {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+        letter-spacing: 0.08em;
+      }
+      .sidebar nav a::before { display: none; }
+      .sidebar-footer { display: none; }
+
+      main {
+        height: auto;
+        overflow-y: auto;
+        scroll-snap-type: none;
+      }
+      .section {
+        padding: 3rem 1.5rem;
+        scroll-snap-align: none;
+      }
+      #experience {
+        padding-top: 2rem !important;
+      }
+      .title {
+        font-size: 2rem;
+      }
+      .contact {
+        font-size: 0.8rem;
+      }
+      .strengths {
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+      }
+      .bio {
+        font-size: 0.88rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .position-date {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .position-date .date {
+        font-size: 0.8rem;
+      }
+      .edu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+      }
+      .edu > div {
+        font-size: 0.88rem;
+      }
+      .edu span {
+        font-size: 0.8rem;
+      }
+      .skill-group {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .skill-group strong {
+        width: auto;
+        font-size: 0.8rem;
+      }
+      .skill-group div {
+        font-size: 0.85rem;
+      }
+      .project {
+        padding: 1.2rem;
+      }
+      .project h3 {
+        font-size: 1rem;
+      }
+      .project p {
+        font-size: 0.85rem;
+      }
+      .summary-social a {
+        font-size: 1.8rem;
+      }
     }
 
   </style>
