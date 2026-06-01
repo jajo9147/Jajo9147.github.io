@@ -8,6 +8,13 @@ A Google Apps Script web application serving as the operational dashboard for a 
 
 **Tech:** Google Apps Script, JavaScript, HTML/CSS, ApexCharts, BigQuery, GCP
 
+## Edge AI & Automation
+
+### [Serverless Edge AI Recovery Pipeline](https://github.com/jajo9147/edge-ai-recovery-pipeline)
+Engineered an end-to-end, serverless automation pipeline on iOS to generate real-time physiological recovery diagnostics for endurance athletes. Extracted time-series metrics from Apple HealthKit and integrated live local weather APIs. Built robust JSON serialization blocks to pass dynamic payloads to a hosted LLM API endpoint, returning context-aware markdown recommendations on-device.
+
+**Tech:** iOS Shortcuts, REST APIs, JSON, LLMs, Prompt Engineering
+
 ## Machine Learning Projects
 
 ### [PyTorch Tabular Binary Classifier](https://github.com/jajo9147/pytorch-tabular-binary-classifier)
