@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Johnson Resume</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.45;
+            color: #111;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.55in 0.7in;
+        }
+
+        /* ---- Header ---- */
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #111;
+        }
+
+        h1 {
+            font-size: 22pt;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .contact {
+            font-size: 9.5pt;
+            color: #333;
+        }
+
+        /* ---- Sections ---- */
+        .section {
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 9.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 2px;
+            margin-bottom: 7px;
+        }
+
+        /* ---- Summary ---- */
+        .summary-tags {
+            font-weight: 700;
+            font-size: 8.5pt;
+            letter-spacing: 0.3px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+        }
+
+        .summary-text {
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+
+        /* ---- Experience ---- */
+        .job {
+            margin-bottom: 7px;
+        }
+
+        .employer {
+            font-weight: 700;
+            font-size: 10.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 2px;
+        }
+
+        .role-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .role {
+            font-style: italic;
+            font-size: 10.5pt;
+            font-weight: 600;
+        }
+
+        .dates {
+            font-size: 9.5pt;
+            color: #444;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        ul {
+            padding-left: 15px;
+            margin-top: 2px;
+        }
+
+        li {
+            margin-bottom: 2px;
+            font-size: 10pt;
+            line-height: 1.4;
+        }
+
+        .role-gap {
+            margin-top: 6px;
+        }
+
+        /* ---- Education ---- */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .school {
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+
+        .degree {
+            font-style: italic;
+            font-size: 10pt;
+        }
+
+        /* ---- Skills ---- */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .skills-table td {
+            font-size: 9.5pt;
+            vertical-align: top;
+            padding: 1.5px 6px 1.5px 0;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            white-space: nowrap;
+            width: 130px;
+        }
+
+        /* ---- Fill-in markers ---- */
+        .needs-input {
+            background: #fff9c4;
+            border-bottom: 1px dashed #bfa000;
+            padding: 0 1px;
+        }
+
+        /* ---- Print ---- */
+        @media print {
+            body {
+                padding: 0.45in 0.6in;
+                font-size: 10pt;
+            }
+
+            @page {
+                size: letter;
+                margin: 0;
+            }
+
+            .needs-input {
+                background: none;
+                border-bottom: none;
+            }
+
+            .print-note {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<div class="header">
+    <h1>Jake Johnson</h1>
+    <div class="contact">
+        Dallas-Fort Worth, TX &nbsp;|&nbsp; jajo9147@gmail.com &nbsp;|&nbsp; (919) 525-0063 &nbsp;|&nbsp;
+        linkedin.com/in/jake-johnson-/ &nbsp;|&nbsp; jajo9147.github.io
+    </div>
+</div>
+
+<!-- ===================== SUMMARY ===================== -->
+<div class="section">
+    <div class="section-title">Summary</div>
+    <div class="summary-tags">ML MODEL DEPLOYMENT &nbsp;|&nbsp; DATA SCIENCE LEADERSHIP &nbsp;|&nbsp; AGENTIC AI &nbsp;|&nbsp; FORTUNE 50 SCALE &nbsp;|&nbsp; MBA &nbsp;|&nbsp; ARMY RANGER</div>
+    <div class="summary-text">
+        Data Science Director with 10+ years deploying ML systems at enterprise scale. At Verizon, led the technical architecture, production deployment, and measurement of 149 AI/ML models, establishing MLOps practices, experimentation standards, and a valuation framework quantifying $2.9B in lifetime portfolio value and ~$850M in annual incremental revenue. Hands-on background in propensity modeling, cross-sell segmentation, and LLM-powered agentic workflows. Leads a 6-person data science team and $10.8M annual budget. MBA in Data Analytics (UT Austin). TS/SCI clearance. 75th Ranger Regiment veteran.
+    </div>
+</div>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<div class="section">
+    <div class="section-title">Experience</div>
+
+    <!-- VERIZON -->
+    <div class="job">
+        <div class="employer">Verizon</div>
+
+        <div class="role-line">
+            <span class="role">Associate Director, Data Science &mdash; Irving, TX</span>
+            <span class="dates">Jan 2024 – Present</span>
+        </div>
+        <ul>
+            <li>Architected an end-to-end model valuation framework across 149 production AI/ML models, defining holdout validation standards, incremental lift attribution methodology, and causal measurement approach to quantify <strong>$2.9B in lifetime portfolio value</strong> and ~$850M in annual incremental revenue across 38 active cohorts, surfacing model-level business contribution for executive investment decisions.</li>
+            <li>Deployed LLM-powered agentic workflows using Claude and GPT APIs with RAG architecture for internal analytics automation; oversaw prompt engineering, context management, and output validation pipeline design for production readiness.</li>
+            <li>Built and mentored a 6-person data science team; established peer review standards for model validation, A/B experiment design, and statistical significance thresholds, accelerating project approval timelines by 40%.</li>
+            <li>Directed <strong>$10.8M CAPEX/OPEX budget</strong> covering GCP/BigQuery infrastructure, ML tooling, and a $7M vendor data partnership that integrated web-log behavioral signals into production revenue workflows, driving $50M in additional top-line impact.</li>
+        </ul>
+
+        <div class="role-line role-gap">
+            <span class="role">Principal Data Scientist &mdash; Irving, TX</span>
+            <span class="dates">Jan 2023 – Jan 2024</span>
+        </div>
+        <ul>
+            <li>Designed and deployed a Mobile-to-Fios cross-sell propensity model from scratch, engineering features across customer tenure, product usage, and behavioral signals to score <strong>7M customer accounts</strong> and identify high-propensity segments that drove <strong>$15M in incremental revenue</strong>.</li>
+            <li>Built model evaluation pipeline with holdout validation, lift curve analysis, and decile-level capture rate benchmarking to enforce production quality standards prior to deployment.</li>
+            <li>Engineered an executive analytics platform on BigQuery, consolidating fragmented data streams from multiple source systems into a unified real-time KPI dashboard, cutting reporting latency from <strong>7 days to near-real-time</strong>.</li>
+        </ul>
+    </div>
+
+    <!-- DFA -->
+    <div class="job">
+        <div class="employer">Dimensional Fund Advisors</div>
+        <div class="role-line">
+            <span class="role">Consultant, MBA Capstone Project &mdash; Austin, TX</span>
+            <span class="dates">Jan 2023 – Jun 2023</span>
+        </div>
+        <ul>
+            <li>Built analytics tools processing large financial datasets to generate portfolio performance insights for internal investment strategy clients.</li>
+        </ul>
+    </div>
+
+    <!-- 75TH RANGER -->
+    <div class="job">
+        <div class="employer">U.S. Army: 75th Ranger Regiment</div>
+        <div class="role-line">
+            <span class="role">Senior Manager, Financial Technology &mdash; Fort Benning, GA</span>
+            <span class="dates">Jan 2021 – Jan 2023</span>
+        </div>
+        <ul>
+            <li>Built SAP-based analytics pipelines and KPI dashboards to monitor and optimize a $102M operational portfolio, automating financial reporting workflows and reducing cycle times by 30% for mission-critical funding decisions.</li>
+            <li>Led a 17-member cross-functional team redesigning data and financial workflows; identified $5M in annual contract cost reduction through systematic vendor spend analysis.</li>
+        </ul>
+    </div>
+
+    <!-- 82ND AIRBORNE -->
+    <div class="job">
+        <div class="employer">U.S. Army: 82nd Airborne Division</div>
+        <div class="role-line">
+            <span class="role">Technology Program Manager &mdash; Fort Bragg, NC</span>
+            <span class="dates">Jun 2018 – Jan 2021</span>
+        </div>
+        <ul>
+            <li>Architected intelligence dashboards and real-time data pipelines integrating multi-source operational data to optimize personnel realignment for 600+ soldiers, cutting mission preparation time by 3 hours per event.</li>
+            <li>Designed real-time data visualization systems for tactical decision support across 32 zero-casualty airborne operations, enabling commanders to act on live operational intelligence feeds.</li>
+        </ul>
+
+        <div class="role-line role-gap">
+            <span class="role">Operations Manager &mdash; Fort Bragg, NC</span>
+            <span class="dates">Jul 2016 – Jun 2018</span>
+        </div>
+        <ul>
+            <li>Developed and briefed operational CONOPs to Battalion and Brigade commanders, translating complex multi-variable planning data (personnel readiness, logistics, equipment, airspace) into concise decision-ready presentations for senior leadership.</li>
+            <li>Built and maintained readiness tracking frameworks across 45 paratroopers, monitoring personnel qualifications, equipment status, and training currency metrics to sustain zero-defect operational tempo across 78 airborne operations and 118 training events.</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- ===================== SELECTED PROJECTS ===================== -->
+<div class="section">
+    <div class="section-title">Selected Projects</div>
+
+    <div class="job">
+        <div class="role-line">
+            <span class="role">AI/ML Portfolio Valuation Framework &mdash; Verizon</span>
+            <span class="dates">2024 – Present</span>
+        </div>
+        <ul>
+            <li>Designed and owns a production valuation framework covering 149 enterprise AI/ML models, defining holdout group construction, incremental lift attribution, and causal measurement methodology to isolate true model-driven revenue from baseline behavior.</li>
+            <li>Framework surfaces model-level ROI across the full portfolio, enabling executive-level investment decisions on model prioritization, deprecation, and vendor spend — quantifying <strong>$2.9B in lifetime portfolio value</strong> (~$850M annually) across 38 active cohorts.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="role-line">
+            <span class="role">Mobile-to-Fios Cross-Sell Propensity Model &mdash; Verizon</span>
+            <span class="dates">2023</span>
+        </div>
+        <ul>
+            <li>Built end-to-end propensity model from feature engineering through production deployment, constructing signals across customer tenure, product usage patterns, and behavioral history to score 7M wireless accounts for Fios cross-sell eligibility.</li>
+            <li>Implemented decile-level lift validation and holdout benchmarking to confirm model performance prior to production; model-driven targeting generated <strong>$15M in incremental revenue</strong> in first year.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="role-line">
+            <span class="role">Agentic Model Monitoring &amp; Registry Reconciliation Platform &mdash; Verizon</span>
+            <span class="dates">2024 – Present</span>
+        </div>
+        <ul>
+            <li>Built an LLM-powered agentic pipeline (Claude API, RAG architecture) that auto-detects new model deployments in GCP and reconciles them against the Engram model registry in real time — catching developer deployments that bypass the standard notification process.</li>
+            <li>Integrated champion/challenger tracking that monitors feature importance shifts across model versions, surfacing which input features enter and exit the active set after each retrain cycle.</li>
+            <li>Dashboard layer monitors production model health across score distribution drift, population coverage, and performance degradation signals, giving the team a single-pane view of portfolio operational status.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ===================== EDUCATION ===================== -->
+<div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+        <div>
+            <div class="school">The University of Texas at Austin</div>
+            <div class="degree">Master of Business Administration &mdash; Data Analytics &amp; Strategy</div>
+        </div>
+        <div class="dates">Aug 2023 – May 2025</div>
+    </div>
+
+    <div class="edu-item">
+        <div>
+            <div class="school">University of Colorado at Boulder</div>
+            <div class="degree">Bachelor of Science &mdash; Political Science &amp; Economics</div>
+        </div>
+        <div class="dates">Aug 2012 – May 2016</div>
+    </div>
+</div>
+
+<!-- ===================== SKILLS ===================== -->
+<div class="section">
+    <div class="section-title">Skills</div>
+    <table class="skills-table">
+        <tr>
+            <td class="skill-label">ML &amp; Modeling:</td>
+            <td>Python, R, scikit-learn, TensorFlow, PyTorch, MLflow, propensity modeling, A/B experimentation, lift analysis, holdout validation</td>
+        </tr>
+        <tr>
+            <td class="skill-label">GenAI &amp; Agents:</td>
+            <td>LLMs (Claude, GPT), RAG architecture, Agent Frameworks, prompt engineering, LLM output evaluation, production deployment pipelines</td>
+        </tr>
+        <tr>
+            <td class="skill-label">Cloud &amp; Data:</td>
+            <td>GCP, BigQuery, AWS, Azure, Hadoop, SQL, real-time pipeline architecture</td>
+        </tr>
+        <tr>
+            <td class="skill-label">BI &amp; Visualization:</td>
+            <td>Tableau, Power BI, Looker, Grafana, Qlik</td>
+        </tr>
+        <tr>
+            <td class="skill-label">Credentials:</td>
+            <td>Top Secret / SCI Security Clearance &nbsp;|&nbsp; 75th Ranger Regiment &nbsp;|&nbsp; Lean Six Sigma &nbsp;|&nbsp; Agile</td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>
