@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jake Johnson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #1a1a1a;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in 0.6in;
+      font-size: 9pt;
+      line-height: 1.5;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid #1a1a1a;
+      margin-bottom: 14px;
+    }
+
+    .header-left h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32pt;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1;
+      color: #1a1a1a;
+    }
+
+    .header-left .tagline {
+      font-size: 7.5pt;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #888;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 8pt;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .header-right a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    /* ── Two-column body ── */
+    .body {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0 28px;
+    }
+
+    /* ── Left column ── */
+    .left-col {
+      border-right: 1px solid #e5e5e5;
+      padding-right: 20px;
+    }
+
+    .left-section {
+      margin-bottom: 16px;
+    }
+
+    .left-section h3 {
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 7px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Stat callout */
+    .stat-block {
+      margin-bottom: 10px;
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 7pt;
+      color: #888;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
+    .stat-divider {
+      width: 24px;
+      height: 1px;
+      background: #ccc;
+      margin: 8px 0;
+    }
+
+    /* Skills */
+    .skill-row {
+      margin-bottom: 8px;
+    }
+
+    .skill-row strong {
+      display: block;
+      font-size: 7pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: 0.3px;
+      margin-bottom: 2px;
+    }
+
+    .skill-row span {
+      font-size: 7.5pt;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .edu-item {
+      margin-bottom: 9px;
+    }
+
+    .edu-item strong {
+      display: block;
+      font-size: 8pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+
+    .edu-item span {
+      font-size: 7.5pt;
+      color: #777;
+      font-style: italic;
+    }
+
+    .edu-item .edu-date {
+      font-size: 7pt;
+      color: #aaa;
+      font-style: normal;
+      display: block;
+      margin-top: 1px;
+    }
+
+    /* Credentials */
+    .cred-item {
+      font-size: 7.5pt;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    /* ── Right column ── */
+    .right-col {}
+
+    /* Summary */
+    .summary {
+      font-size: 8.5pt;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Experience */
+    .exp-section h3 {
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .job {
+      margin-bottom: 11px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .job-company {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.3px;
+    }
+
+    .job-date {
+      font-size: 7.5pt;
+      color: #aaa;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+
+    .job-title {
+      font-size: 8pt;
+      font-weight: 500;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 12px;
+    }
+
+    li {
+      font-size: 8pt;
+      color: #444;
+      margin-bottom: 3px;
+      line-height: 1.55;
+    }
+
+    li::marker {
+      color: #ccc;
+    }
+
+    .sub-role {
+      margin-top: 6px;
+    }
+
+    /* Print */
+    @media print {
+      body { padding: 0.4in 0.5in; }
+      @page { size: letter; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <h1>JAKE JOHNSON</h1>
+      <div class="tagline">Data Science &nbsp;&middot;&nbsp; AI/ML &nbsp;&middot;&nbsp; Army Ranger</div>
+    </div>
+    <div class="header-right">
+      Dallas-Fort Worth, TX<br>
+      jajo9147@gmail.com &nbsp;|&nbsp; (919) 525-0063<br>
+      linkedin.com/in/jake-johnson-/ &nbsp;|&nbsp; jajo9147.github.io
+    </div>
+  </div>
+
+  <!-- Two-column body -->
+  <div class="body">
+
+    <!-- Left column -->
+    <div class="left-col">
+
+      <!-- Stats -->
+      <div class="left-section">
+        <h3>By the Numbers</h3>
+        <div class="stat-block">
+          <div class="stat-number">$2.9B</div>
+          <div class="stat-label">Lifetime portfolio value<br>across 149 AI/ML models</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-block">
+          <div class="stat-number">~$850M</div>
+          <div class="stat-label">Annual incremental revenue<br>measured &amp; attributed</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-block">
+          <div class="stat-number">7M</div>
+          <div class="stat-label">Accounts scored,<br>cross-sell propensity model</div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="left-section">
+        <h3>Skills</h3>
+        <div class="skill-row">
+          <strong>ML & Modeling</strong>
+          <span>Python, scikit-learn, XGBoost, PyTorch, MLflow, Domino, holdout validation, lift analysis</span>
+        </div>
+        <div class="skill-row">
+          <strong>GenAI & Agents</strong>
+          <span>Claude, GPT, RAG, Agent Frameworks, prompt engineering</span>
+        </div>
+        <div class="skill-row">
+          <strong>Cloud & Data</strong>
+          <span>GCP, BigQuery, AWS, Azure, Tableau, Looker, Power BI</span>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="left-section">
+        <h3>Education</h3>
+        <div class="edu-item">
+          <strong>UT Austin</strong>
+          <span>MBA — Data Analytics &amp; Strategy</span>
+          <span class="edu-date">2023 – 2025</span>
+        </div>
+        <div class="edu-item">
+          <strong>Univ. of Colorado</strong>
+          <span>BS — Political Science &amp; Economics</span>
+          <span class="edu-date">2012 – 2016</span>
+        </div>
+      </div>
+
+      <!-- Credentials -->
+      <div class="left-section">
+        <h3>Credentials</h3>
+        <div class="cred-item">Top Secret / SCI Clearance</div>
+        <div class="cred-item">75th Ranger Regiment</div>
+        <div class="cred-item">Lean Six Sigma</div>
+        <div class="cred-item">Agile</div>
+      </div>
+
+    </div>
+
+    <!-- Right column -->
+    <div class="right-col">
+
+      <p class="summary">
+        Data Science Director with 10+ years deploying ML systems at enterprise scale. At Verizon, owns the architecture, production deployment, and measurement of 149 AI/ML models across the consumer portfolio. Built the valuation framework that quantifies $2.9B in lifetime model value. Hands-on background in predictive modeling, cross-sell segmentation, and LLM-powered agentic systems. Leads a 6-person DS team and $10.8M budget.
+      </p>
+
+      <div class="exp-section">
+        <h3>Experience</h3>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">Verizon</span>
+            <span class="job-date">Jan 2023 – Present</span>
+          </div>
+          <div class="job-title">Data Science, Associate Director (Dec 2024 – Present) &nbsp;/&nbsp; Principal Data Scientist (Jan 2023 – Dec 2024)</div>
+          <ul>
+            <li>Architected end-to-end valuation framework across 149 production models, quantifying <strong>$2.9B lifetime portfolio value</strong> and ~$850M in annual incremental revenue through holdout validation and causal lift attribution.</li>
+            <li>Built and deployed LLM-powered agentic monitoring platform (Claude, GPT, RAG) that auto-reconciles GCP deployments against the model registry and tracks champion/challenger feature shifts — zero manual operations.</li>
+            <li>Designed and deployed a predictive cross-sell model scoring <strong>7M accounts</strong>, driving <strong>$15M in incremental revenue</strong> in year one.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">U.S. Army: 75th Ranger Regiment</span>
+            <span class="job-date">Jan 2021 – Jan 2023</span>
+          </div>
+          <div class="job-title">Senior Manager, Financial Technology &mdash; Fort Benning, GA</div>
+          <ul>
+            <li>Built SAP analytics pipelines and KPI dashboards on a $102M portfolio, cutting reporting cycle times 30% and identifying $5M in annual cost reduction.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">U.S. Army: 82nd Airborne Division</span>
+            <span class="job-date">Jun 2016 – Jan 2021</span>
+          </div>
+          <div class="job-title">Technology Program Manager / Operations Manager &mdash; Fort Bragg, NC</div>
+          <ul>
+            <li>Architected intelligence dashboards and real-time data pipelines for 600+ personnel, cutting mission prep time 3 hours per event across 32 zero-casualty airborne operations.</li>
+            <li>Developed and briefed operational CONOPs to Battalion and Brigade commanders, translating complex multi-variable planning data into decision-ready presentations for senior leadership.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
